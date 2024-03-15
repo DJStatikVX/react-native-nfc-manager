@@ -122,7 +122,9 @@ class TagTechnologyRequest {
 
     void close() {
         try {
-            mTech.close();
+            if (mTech != null) {
+                mTech.close();
+            }
         } catch (Exception ex) {
             Log.d(LOG_TAG, "fail to close tech");
         }
